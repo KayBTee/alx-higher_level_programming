@@ -1,10 +1,13 @@
-mport sys
+#!/usr/bin/python3
+from __future__ import print_function
+import sys
 
 
 def safe_function(fct, *args):
     try:
-        integer = fct(*args)
-        return (integer)
-    except Exception as error:
-        print("Exception: {}".format(error), file=sys.stderr)
-        return (None)
+        res = fct(*args)
+    except Exception as e:
+        print("Exception: {}".format(e), file=sys.stderr)
+        return None
+    else:
+        return res
