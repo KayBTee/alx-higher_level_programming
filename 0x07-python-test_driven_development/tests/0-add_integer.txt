@@ -1,0 +1,81 @@
+The ``0-add_integer`` module
+=============================
+usage of 0-add_integer
+=============================
+
+This library contains one function called ``add_integer()``
+
+``add_integer()`` adds two integers
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+use it to add the two integers:
+
+Add two integers.
+	>>> add_integer(2,3)
+	5
+
+Add two floats.
+	>>> add_integer(7.5, 4.3)
+	11
+
+Add a string and integer.
+	>>> add_integer('x', 3)
+	Traceback (most recent call last):
+           ...
+	TypeError: a must be an integer
+
+Add list to integer.
+	>>> add_integer([], 4)
+	Traceback (most recent call last):
+	   ...
+	TypeError: a must be an integer
+
+Add integer to string.
+	>>> add_integer(10, '90')
+	Traceback (most recent call last):
+           ...
+	TypeError: b must be an integer
+
+Add set to an integer.
+	>>> add_integer({}, 99)
+	Traceback (most recent call last):
+          ...
+	TypeError: a must be an integer
+
+Add positive  to negative integer
+	>>> add_integer(99, -3)
+	96
+
+Add positive integer to negative float
+	>>> add_integer(10.4, -2)
+	8
+
+Add two None parameter
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+	  ...
+	TypeError: a must be an integer
+
+
+Add an integer to a None
+	>>> add_integer(9, None)
+	Traceback (most recent call last):
+	  ...
+	TypeError: b must be an integer
+
+	>>> add_integer(None, 9)
+	Traceback (most recent call last):
+	  ...
+	TypeError: a must be an integer
+
+Add an object to an integer
+	>>> add_integer((1, 2, 3), 10)
+	Traceback (most recent call last):
+	  ...
+	TypeError: a must be an integer
+
+	>>> add_integer(10, (1, 2, 3))
+	Traceback (most recent call last):
+	  ...
+	TypeError: b must be an integer
