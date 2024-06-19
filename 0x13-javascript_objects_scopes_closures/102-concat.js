@@ -14,5 +14,5 @@ const file2 = fs.readFileSync(argv[3], 'utf-8').toString();
 // Concatenating the contents of the two files
 const concatenatedContent = file1 + file2;
 
-Writing the concatenated content to the destination file synchronously
-fs.writeFileSync(argv[4], concatenatedContent);
+// Writing the concatenated content to the destination file synchronously
+const fs.writeFileSync(argv[4], concatenatedContent);
